@@ -1,0 +1,138 @@
+.no-scroll {
+  // overflow-y: hidden;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -720px;
+  width: 612px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 115px 32px 168px 90px;
+  background-color: #0f1d45;
+  transition: all 0.3s ease-in;
+}
+
+.mobile-modal {
+  position: fixed;
+  top: 0;
+  left: -720px;
+  width: 612px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 199px 83px 110px 83px;
+  background: #0F1D45;
+  transition: all 0.3s ease-in;
+  z-index: 99;
+}
+
+.mobile-modal::after {
+  position: absolute;
+  content: '';
+  transform: rotate(-55.505deg);
+  border-radius: 738.043px;
+  background: rgba(94, 157, 228, 0.21);
+  filter: blur(194px);
+  width: 738.043px;
+  height: 412.023px;
+  bottom: 0;
+  right: -150px;
+  z-index: -1;
+}
+
+.application {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &__title {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 157.8%;
+    margin-bottom: 98px;
+  }
+
+  &__subtitle {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 145%;
+    margin-bottom: 205px;
+  }
+
+  &__logo {
+    margin-left: auto;
+  }
+}
+
+
+.mobile-nav--open {
+  left: 0;
+}
+
+.mobile-modal--open {
+  left: 0;
+}
+
+.mobile-nav-fade {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 29, 69, 0.60);
+  z-index: 98;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  pointer-events: none;
+}
+
+
+.mobile-nav-fade--open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+.mobile-nav-wrap {
+  display: none;
+  margin-left: auto;
+  margin-right: 15px;
+  @media (max-width: 992px) {
+    display: block;
+  }
+}
+
+
+.list-wrap {
+  position: fixed;
+  top: 0;
+  right: -500px;
+  text-align: center;
+  width: 312px;
+  height: 65.7%;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 108px 32px 174px 90px;
+  background-color: #0f1d45;
+  transition: all 0.3s ease-in;
+  &--active {
+    right: 0;
+  }
+  .burger-img {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+}
+
+.mobile-nav-list {
+  font-size: 68px;
+}
